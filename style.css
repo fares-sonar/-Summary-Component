@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=Rubik:wght@300;400;500;600&display=swap');
+*{
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin:0;padding:0;
+    box-sizing: border-box;
+    border: none;
+    outline:none;
+    text-decoration: none;
+}
+body{
+    background-color: var(--pale-blue);
+}
+:root{
+    --light-red:hsl(0, 100%, 67%);
+    --orangey-yellow:hsl(39, 100%, 56%);
+    --green-teal:hsl(166, 100%, 37%);
+    --cobalt-blue:hsl(234, 85%, 45%);
+    --light-slate-blue:hsl(252, 100%, 67%);
+    --light-royal-blue:hsl(241, 81%, 54%);
+    --violet-blue:hsla(256, 72%, 46%, 1);
+    --persian-blue:hsla(241, 72%, 46%, 0);
+    --white:hsl(0, 0%, 100%);
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender:hsl(241, 100%, 89%);
+    --dark-blue:hsl(224, 30%, 27%)
+}
+
+.container{
+    position: relative;
+}
+
+.container .box-container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: var(--white);
+    border-radius: 2rem;
+}
+
+.container .result{
+    display: flex;
+    flex: 1 1 40rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg,var(--light-slate-blue),var(--light-royal-blue));
+    border-radius: 2rem;
+    
+}
+
+.container .result >  h3{
+    font-size: 1.5rem;
+    color: var(--light-lavender);
+    margin: 2rem 0;
+}
+
+.container .result .numbers{
+    padding: 2rem;
+    height: 10rem;
+    width: 10rem;
+    background-image: linear-gradient(180deg,var(--violet-blue),var(--persian-blue));
+    border-radius: 50%;
+    text-align: center;
+}
+
+.container .result .numbers p{
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+.container .result .numbers span{
+    display: inline-block;
+    color: var(--light-lavender);
+    margin-bottom: 1rem;
+}
+
+.container .result .text{
+    text-align: center;
+    width: 60%;
+}
+
+.container .result .text h3{
+    color: var(--white);
+    font-size: 1.8rem;
+    margin: 1.5rem;
+}
+
+.container .result .text p{
+    color: var(--pale-blue);
+    line-height: 1.6;
+}
+.container .summary{
+    text-align: start;
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.container .summary h3{
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.container .summary .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+.container .summary .box:first-of-type{
+    background-color: hsl(0, 100%, 67%, 0.1) ;
+}
+.container .summary .box:nth-of-type(2){
+    background-color: hsl(39, 100%, 56%, 0.1) ;
+}
+.container .summary .box:nth-of-type(3){
+    background-color: hsl(166, 100%, 37%,0.1) ;
+}
+.container .summary .box:nth-of-type(4){
+    background-color: hsl(234, 85%, 45%,.1) ;
+}
+
+.container .summary .box .image{
+    display: flex;
+    gap: 1rem;
+}
+
+.container .summary .box:first-of-type h4{
+    color: var(--light-red);
+}
+
+.container .summary .box:nth-of-type(2) h4{
+    color: var(--orangey-yellow);
+}
+.container .summary .box:nth-of-type(3) h4{
+    color: var(--green-teal);
+}
+.container .summary .box:nth-of-type(4) h4{
+    color: var(--cobalt-blue);
+}
+
+.container .summary .box > p{
+    color: var(--dark-blue);
+    font-weight: bolder;
+}
+
+.container .summary .box p span{
+    color: gray;
+    margin-left: .3rem;
+    font-weight: bolder ;
+}
+
+.container .summary .button{
+    text-align: center;
+    padding: 1rem;
+    border-radius: 3rem;
+    background-color: var(--dark-blue);
+    margin: 2rem 0;
+}
+
+.container .summary .button a{
+    color: var(--white);
+}
+
+@media(max-width:1024px){
+    .container .box-container{
+        flex-wrap: wrap;
+    }
+}
